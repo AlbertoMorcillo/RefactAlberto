@@ -103,6 +103,8 @@ public class Main {
         }
     }
 
+    //REFACT5: Extracción de clase. Pongo el metodo Order y calculateToTalPrice en una clase llamada Order.
+    /*
     public static class Order {
         private List<OrderLineItem> lineItems;
         private double taxRate;
@@ -121,7 +123,7 @@ public class Main {
             return subtotal + tax;
         }
     }
-
+*/
     public class OrderLineItem {
         private String productName;
         private int quantity;
