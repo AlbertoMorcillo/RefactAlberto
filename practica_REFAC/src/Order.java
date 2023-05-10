@@ -1,17 +1,17 @@
 import java.util.List;
-//REFACT5: Aquí es donde puse el metodo order en esta clase.
+//REFACT5: Aquí es donde puse el metodo order en esta clase modificando de en vez de <Main.OrderLineItem a ponerlo OrderLineItem puesto que ya no esta en la clase Main.
 public class Order {
-    private List<Main.OrderLineItem> lineItems;
+    private List<OrderLineItem> lineItems;
     private double taxRate;
 
-    public Order(List<Main.OrderLineItem> lineItems, double taxRate) {
+    public Order(List<OrderLineItem> lineItems, double taxRate) {
         this.lineItems = lineItems;
         this.taxRate = taxRate;
     }
 
     public double calculateTotalPrice() {
         double subtotal = 0.0;
-        for (Main.OrderLineItem item : lineItems) {
+        for (OrderLineItem item : lineItems) {
             subtotal += item.getPrice();
         }
         double tax = subtotal * taxRate;

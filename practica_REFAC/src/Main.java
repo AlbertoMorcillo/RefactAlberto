@@ -2,6 +2,7 @@ import java.io.File;
 import java.util.List;
 import java.util.Scanner;
 
+
 public class Main {
     static Scanner scan = new Scanner(System.in);
 
@@ -128,11 +129,13 @@ public class Main {
             return subtotal + tax;
         }
     }
-*/
+*///REFACT 10: Extracción de clase al igual que la extracción que hicimos de Order.
+    /*
     public class OrderLineItem {
         private String productName;
         private int quantity;
         private double price;
+
 
         public OrderLineItem(String productName, int quantity, double price) {
             this.productName = productName;
@@ -145,6 +148,9 @@ public class Main {
         }
     }
 
+     */
+    // REFACT 9: Extracción de clase por el mismo mótivo que el REFACT8 (Human).
+   /*
     public class Customer {
         private String firstName;
         private String lastName;
@@ -158,6 +164,8 @@ public class Main {
             return firstName + " " + lastName;
         }
     }
+
+    */
 
     //REFACT1: Aquí lo ponemos como metodo para que quede más limpio el main, además le añadí algún titulo al menú para cada opcion para saber que hace cada opción.
     public static void mostrarMenu() {
