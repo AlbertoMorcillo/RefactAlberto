@@ -178,9 +178,11 @@ public class Main {
             System.out.println("4. ");
             System.out.println("5. ");
             System.out.println("0. Acabar");
+            System.out.print("\nElije qué quieres hacer: ");
 
             opcio = scan.nextInt();
             scan.nextLine();
+            System.out.println();
             switch (opcio) {
                 case 1:
                     //REFACT3: Extracción de metodo. Creamos un metodo llamado compararNumeros que nos hara esto mismo.
@@ -217,11 +219,11 @@ public class Main {
         //REFACT8: También inicializamos una nueva variable llamada solución y la usaremos
         int num1, num2;
         String solucion;
-        System.out.println("intro: ");
+        System.out.print("intro: ");
         //int num1 = scan.nextInt();
         //REFACT7: Ponemos las variables que hemos incializado anteriormente.
         num1 = scan.nextInt();
-        System.out.println("intro: ");
+        System.out.print("intro: ");
         //int num2 = scan.nextInt();
         num2 = scan.nextInt(); //REFACT 7
         //REFACT 8: Hacemos el código más legible
@@ -234,10 +236,10 @@ public class Main {
     }
          */
         if (max(num1, num2)) {
-            solucion = num1 + "es más grande que " + num2; //REFACT7 usamos la variable string para poner la respuesta
+            solucion =num1 + " es más grande que " + num2 + "\n"; //REFACT7 usamos la variable string para poner la respuesta
 
         } else {
-            solucion = num1 + "No es más grande que " + num2; //REFACT7 No pongo num2 es más grande que num1, ya que puede ser más grande o igual
+            solucion = num1 + " no es más grande que " + num2 + "\n"; //REFACT7 No pongo num2 es más grande que num1, ya que puede ser más grande o igual
             //Por lo tanto es más correcto poner que num1 no es más grande que num2.
         }
         System.out.println(solucion);
