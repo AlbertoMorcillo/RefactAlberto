@@ -1,4 +1,3 @@
-import java.io.File;
 import java.util.List;
 import java.util.Scanner;
 
@@ -68,13 +67,14 @@ public class Main {
     }
 
     public static void calcEquacioSegongrau(double a, double b, double c) {
-        double D = b * b - 4 * a * c;
-        if (D > 0) {
+        //double D = b * b - 4 * a * c; //REFACT 12: Ponerle un nombre que se entienda
+        double descriminante = b * b - 4 * a * c;
+        if (descriminante > 0) {
             double x1, x2;
-            x1 = (-b - Math.sqrt(D)) / (2 * a);
-            x2 = (-b + Math.sqrt(D)) / (2 * a);
+            x1 = (-b - Math.sqrt(descriminante)) / (2 * a);
+            x2 = (-b + Math.sqrt(descriminante)) / (2 * a);
             System.out.println("x1 = " + x1 + ", x2 = " + x2);
-        } else if (D == 0) {
+        } else if (descriminante == 0) {
             double x;
             x = -b / (2 * a);
             System.out.println("x = " + x);
@@ -236,10 +236,9 @@ public class Main {
         if (max(num1, num2)) {
             solucion = num1 + "es más grande que " + num2; //REFACT7 usamos la variable string para poner la respuesta
 
-        }
-        else{
+        } else {
             solucion = num1 + "No es más grande que " + num2; //REFACT7 No pongo num2 es más grande que num1, ya que puede ser más grande o igual
-                                                                //Por lo tanto es más correcto poner que num1 no es más grande que num2.
+            //Por lo tanto es más correcto poner que num1 no es más grande que num2.
         }
         System.out.println(solucion);
     }

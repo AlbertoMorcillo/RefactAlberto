@@ -16,6 +16,7 @@ public class OrderLineItem {
         return price * quantity;
     }
     //REFACT11: Podría poner los atributos en publico, pero sería más correcto por seguridad hacer getters y setters.
+    //Así si en un futuro se quiere utilizar ya no habrá problema porque estaran creados.
 
     public String getProductName() {
         return productName;
