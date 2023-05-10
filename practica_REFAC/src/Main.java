@@ -53,14 +53,17 @@ public class Main {
 //        } while (opcio != 0);
     }
 
+    //REFACT 6: Hacemos un inline code, reduciendo bastante el código ya que lo otro era redundante
     public static boolean max(int a, int b) {
-        if (a > b) {
+        /*if (a > b) {
             return true;
         } else if (a == b) {
             return false;
         } else {
             return false;
         }
+         */
+        return a > b; // REFACT 6: AL final lo reducimos a esto, si a es mayor que b devolverá a true, si no devolverá false,
     }
 
     public static void calcEquacioSegongrau(double a, double b, double c) {
@@ -154,8 +157,6 @@ public class Main {
         }
     }
 
-}
-
     //REFACT1: Aquí lo ponemos como metodo para que quede más limpio el main, además le añadí algún titulo al menú para cada opcion para saber que hace cada opción.
     public static void mostrarMenu() {
         int opcio;
@@ -207,16 +208,37 @@ public class Main {
         System.out.println("Precio: " + producto.getPrecio());
         System.out.println("Cantidad en stock: " + producto.getCantidadEnStock());
     }
+
     //REFACT4: Aquí vemos el método compararNumeros.
     public static void compararNumeros() {
+        //REFACT7: Es mejor incicializar las variables al inicio.
+        //REFACT8: También inicializamos una nueva variable llamada solución y la usaremos
+        int num1, num2;
+        String solucion;
         System.out.println("intro: ");
-        int num1 = scan.nextInt();
+        //int num1 = scan.nextInt();
+        //REFACT7: Ponemos las variables que hemos incializado anteriormente.
+        num1 = scan.nextInt();
         System.out.println("intro: ");
-        int num2 = scan.nextInt();
+        //int num2 = scan.nextInt();
+        num2 = scan.nextInt(); //REFACT 7
+        //REFACT 8: Hacemos el código más legible
+        /*
         if (max(num1,num2)) {
             System.out.println("aaa");
         } else {
             System.out.println("bbb");
         }
+    }
+         */
+        if (max(num1, num2)) {
+            solucion = num1 + "es más grande que " + num2; //REFACT7 usamos la variable string para poner la respuesta
+
+        }
+        else{
+            solucion = num1 + "No es más grande que " + num2; //REFACT7 No pongo num2 es más grande que num1, ya que puede ser más grande o igual
+                                                                //Por lo tanto es más correcto poner que num1 no es más grande que num2.
+        }
+        System.out.println(solucion);
     }
 }
