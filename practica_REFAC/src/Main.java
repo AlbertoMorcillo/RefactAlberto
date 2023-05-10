@@ -82,6 +82,8 @@ public class Main {
         }
     }
 
+    //REFACT8: Extracción de clase, ya que veo bastante logica separar Human y dejar el main más limpio
+    /*
     public static class Human {
         private String name;
         private String age;
@@ -105,7 +107,7 @@ public class Main {
                     .append(quarter).toString();
         }
     }
-
+     */
     //REFACT5: Extracción de clase. Pongo el metodo Order y calculateToTalPrice en una clase llamada Order.
     /*
     public static class Order {
@@ -199,14 +201,6 @@ public class Main {
                     System.out.println("ATENCIÓ!!! \nHa de ser un valor entre 0 i 5");
             }
         } while (opcio != 0);
-    }
-
-    //REFACT4
-    public static void imprimirDetallesProducto(Product producto) {
-        System.out.println("Nombre del producto: " + producto.getNombre());
-        System.out.println("Descripción: " + producto.getDescripcion());
-        System.out.println("Precio: " + producto.getPrecio());
-        System.out.println("Cantidad en stock: " + producto.getCantidadEnStock());
     }
 
     //REFACT4: Aquí vemos el método compararNumeros.
