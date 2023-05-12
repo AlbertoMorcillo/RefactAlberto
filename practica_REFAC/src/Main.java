@@ -68,16 +68,17 @@ public class Main {
 
     public static void calcEquacioSegongrau(double a, double b, double c) {
         //double D = b * b - 4 * a * c; //REFACT 12: Ponerle un nombre que se entienda
-        double descriminante = b * b - 4 * a * c;
+        double descriminante = b * b - 4 * a * c; //REFACT12
         if (descriminante > 0) {
-            double x1, x2;
-            x1 = (-b - Math.sqrt(descriminante)) / (2 * a);
-            x2 = (-b + Math.sqrt(descriminante)) / (2 * a);
-            System.out.println("x1 = " + x1 + ", x2 = " + x2);
+            //double x1, double x2; REFACT 12: Ponerle un nombre que se entienta
+            double solucion1, solucion2; //REFACT 12
+            solucion1 = (-b - Math.sqrt(descriminante)) / (2 * a);
+            solucion2 = (-b + Math.sqrt(descriminante)) / (2 * a);
+            System.out.println("x1 = " + solucion1 + ", x2 = " + solucion2);
         } else if (descriminante == 0) {
-            double x;
-            x = -b / (2 * a);
-            System.out.println("x = " + x);
+            double solucion;//REFACT 12: Ponerle un nombre que se entienda
+            solucion = -b / (2 * a);
+            System.out.println("x = " + solucion);
         } else {
             System.out.println("Equation has no roots");
         }
@@ -222,7 +223,7 @@ public class Main {
         System.out.print("intro: ");
         //int num1 = scan.nextInt();
         //REFACT7: Ponemos las variables que hemos incializado anteriormente.
-        num1 = scan.nextInt();
+        num1 = scan.nextInt(); //REFACT7
         System.out.print("intro: ");
         //int num2 = scan.nextInt();
         num2 = scan.nextInt(); //REFACT 7
@@ -236,10 +237,10 @@ public class Main {
     }
          */
         if (max(num1, num2)) {
-            solucion =num1 + " es más grande que " + num2 + "\n"; //REFACT7 usamos la variable string para poner la respuesta
+            solucion =num1 + " es más grande que " + num2 + "\n"; //REFACT8 usamos la variable string para poner la respuesta
 
         } else {
-            solucion = num1 + " no es más grande que " + num2 + "\n"; //REFACT7 No pongo num2 es más grande que num1, ya que puede ser más grande o igual
+            solucion = num1 + " no es más grande que " + num2 + "\n"; //REFACT8 No pongo num2 es más grande que num1, ya que puede ser más grande o igual
             //Por lo tanto es más correcto poner que num1 no es más grande que num2.
         }
         System.out.println(solucion);
