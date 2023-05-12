@@ -172,7 +172,7 @@ public class Main {
         int opcio;
         do {
             //REFACT1: Extracción de metodo para el menú.
-            System.out.println("1.Comparar números y decir cúal de los dos es más grande (aaa el primero bbb el resto) "/* titulo*/);
+            System.out.println("1.Comparar números y decir cúal de los dos es más grande (aaa el primero bbb el resto) ");
             System.out.println("2. Calcular equación de segundo grado");
             System.out.println("3. Ver un producto y calcular su precio total y modificarlo si es necesario");
             //System.out.println("4. "); Comentamos esta opción ya que no hace nada.
