@@ -173,10 +173,10 @@ public class Main {
         do {
             //REFACT1: Extracción de metodo para el menú.
             System.out.println("1.Comparar números y decir cúal de los dos es más grande (aaa el primero bbb el resto) "/* titulo*/);
-            System.out.println("2. ");
-            System.out.println("3. ");
-            System.out.println("4. ");
-            System.out.println("5. ");
+            System.out.println("2. Calcular equación de segundo grado");
+            System.out.println("3. Ver un producto y calcular su precio total y modificarlo si es necesario");
+            //System.out.println("4. "); Comentamos esta opción ya que no hace nada.
+            //System.out.println("5. "); Comentamos esta opción ya que no hace nada.
             System.out.println("0. Acabar");
             System.out.print("\nElije qué quieres hacer: ");
 
@@ -208,7 +208,7 @@ public class Main {
                 case 0:
                     break;
                 default:
-                    System.out.println("ATENCIÓ!!! \nHa de ser un valor entre 0 i 5");
+                    System.out.println("ATENCIÓ!!! \nHa de ser un valor entre 0 i 3"); //Cambiamos el mensaje de poner entre 0 i 5 a 0 i 3.
             }
         } while (opcio != 0);
     }
