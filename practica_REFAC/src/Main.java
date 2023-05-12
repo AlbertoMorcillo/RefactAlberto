@@ -68,14 +68,14 @@ public class Main {
 
     public static void calcEquacioSegongrau(double a, double b, double c) {
         //double D = b * b - 4 * a * c; //REFACT 12: Ponerle un nombre que se entienda
-        double descriminante = b * b - 4 * a * c; //REFACT12
-        if (descriminante > 0) {
+        double arrelCuadrada = b * b - 4 * a * c; //REFACT12
+        if (arrelCuadrada > 0) {
             //double x1, double x2; REFACT 12: Ponerle un nombre que se entienta
             double solucion1, solucion2; //REFACT 12
-            solucion1 = (-b - Math.sqrt(descriminante)) / (2 * a);
-            solucion2 = (-b + Math.sqrt(descriminante)) / (2 * a);
+            solucion1 = (-b - Math.sqrt(arrelCuadrada)) / (2 * a);
+            solucion2 = (-b + Math.sqrt(arrelCuadrada)) / (2 * a);
             System.out.println("x1 = " + solucion1 + ", x2 = " + solucion2);
-        } else if (descriminante == 0) {
+        } else if (arrelCuadrada == 0) {
             double solucion;//REFACT 12: Ponerle un nombre que se entienda
             solucion = -b / (2 * a);
             System.out.println("x = " + solucion);
