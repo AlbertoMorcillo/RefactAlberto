@@ -1,5 +1,5 @@
 
-//REFACT 10: Aquí es donde hemos puesto el OrderLineItem
+//REFACT10: Aquí es donde hemos puesto el OrderLineItem
 public class OrderLineItem {
     private String productName;
     private int quantity;

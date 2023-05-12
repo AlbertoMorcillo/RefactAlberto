@@ -53,7 +53,7 @@ public class Main {
 //        } while (opcio != 0);
     }
 
-    //REFACT 6: Hacemos un inline code, reduciendo bastante el código ya que lo otro era redundante
+    //REFACT6: Hacemos un inline code, reduciendo bastante el código ya que lo otro era redundante
     public static boolean max(int a, int b) {
         /*if (a > b) {
             return true;
@@ -130,7 +130,7 @@ public class Main {
             return subtotal + tax;
         }
     }
-*///REFACT 10: Extracción de clase al igual que la extracción que hicimos de Order.
+*///REFACT10: Extracción de clase al igual que la extracción que hicimos de Order.
     /*
     public class OrderLineItem {
         private String productName;
@@ -150,7 +150,7 @@ public class Main {
     }
 
      */
-    // REFACT 9: Extracción de clase por el mismo mótivo que el REFACT8 (Human).
+    // REFACT9: Extracción de clase por el mismo mótivo que el REFACT8 (Human).
    /*
     public class Customer {
         private String firstName;
