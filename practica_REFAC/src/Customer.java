@@ -1,4 +1,4 @@
-//REFACT 9. La extracción de clase que hicimos en el main va aquí
+//REFACT 9. La extracción de clase de customer que hicimos en el main va aquí
 public class Customer {
     private String firstName;
     private String lastName;
