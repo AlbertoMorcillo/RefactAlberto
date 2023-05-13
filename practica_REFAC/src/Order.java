@@ -14,7 +14,11 @@ public class Order {
         for (OrderLineItem item : lineItems) {
             subtotal += item.getPrice();
         }
+        // REFACTOR 13: Metode Inline hacemos el mismo calculo pero en una línea.
+        return subtotal + (subtotal * taxRate);
+        /*
         double tax = subtotal * taxRate;
         return subtotal + tax;
+         */
     }
 }
